@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode } from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./styles.css";
+import { SITEKEY_V3 } from "../config/app/default";
 
+const captchaLang = "fr";
+
+const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <StrictMode>
+    <GoogleReCaptchaProvider reCaptchaKey={SITEKEY_V3} language={captchaLang}>
+      <App />
+    </GoogleReCaptchaProvider>
+  </StrictMode>,
+  rootElement
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

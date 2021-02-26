@@ -1,0 +1,60 @@
+.body {
+  box-sizing: border-box;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  padding: 1rem 3rem 3rem;
+  background: white;
+  border: 1px solid rgba(224, 224, 224, 1);
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input {
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid rgba(209, 209, 209, 1);
+  border-radius: 0.5rem;
+}
+
+.title {
+  color: gray;
+}
+
+.button {
+  padding: 1rem;
+  color: white;
+  background-color: rgb(3, 30, 73);
+  border-style: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button:active {
+  border-radius: 0.8rem;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.successMessage {
+  color: green;
+}
